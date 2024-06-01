@@ -36,8 +36,28 @@
             color: #88c999;
             font-family: 'Georgia', serif;
         }
-        .video-container {
-            text-align: center;
+        .resume-item {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .resume-item strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .resume-item ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .resume-item ul ul {
+            font-size: 0.9em;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .resume-item li {
+            margin-bottom: 10px;
         }
         .video-container iframe {
             width: 100%;
@@ -60,18 +80,6 @@
             background-color: #88c999;
             color: #2c2c2c;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .resume-item {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 600px;
-        }
     </style>
 </head>
 <body>
@@ -81,21 +89,20 @@
     <div class="container">
         <div class="section">
             <h2>Curriculum Vitae</h2>
-            <ul class="resume-item">
-                <li><strong>Education:</strong></li>
+            <div class="resume-item">
+                <strong>Education:</strong>
                 <ul>
-                    <li>A-Level</li>
                     <li>Degree in Chemical Engineering (missing dissertation)</li>
                     <li>60-hour course in Lean Manufacturing and Six Sigma</li>
                 </ul>
-                <li><strong>Languages:</strong></li>
+                <strong>Languages:</strong>
                 <ul>
                     <li>Spanish: Fluent</li>
                     <li>English: Intermediate</li>
                     <li>Valencian: Basic</li>
                     <li>French: Beginner</li>
                 </ul>
-                <li><strong>Work Experience:</strong></li>
+                <strong>Work Experience:</strong>
                 <ul>
                     <li>Amazon, Germany: 4 months</li>
                     <li>Bax Music, Netherlands: 2 months</li>
@@ -104,7 +111,7 @@
                     <li>Internship at Urbaser: In charge of the biodigester and biogas production</li>
                     <li>Family business in Boston: 3 months, buying and selling</li>
                 </ul>
-            </ul>
+            </div>
         </div>
         <div class="section video-container">
             <h2>Video</h2>
