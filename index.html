@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismael Bouaouda Ruiz - Personal Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -28,53 +30,9 @@
             background-color: #3b3b3b;
             border-radius: 8px;
         }
-        .section {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        h2 {
+        .section h2 {
             color: #88c999;
             font-family: 'Georgia', serif;
-        }
-        .resume-item {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 600px;
-        }
-        .resume-item strong {
-            display: block;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .resume-item ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-        }
-        .resume-item ul ul {
-            font-size: 0.9em;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        .resume-item li {
-            margin-bottom: 10px;
-        }
-        .video-container iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 315px;
-        }
-        .contact {
-            text-align: center;
-        }
-        .contact a {
-            color: #88c999;
-            text-decoration: none;
-            border: 1px solid #88c999;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: inline-block;
-            transition: background-color 0.3s, color 0.3s;
         }
         .contact a:hover {
             background-color: #88c999;
@@ -89,14 +47,15 @@
     <div class="container">
         <div class="section">
             <h2>Curriculum Vitae</h2>
-            <div class="resume-item">
+            <p>Here is a brief overview of my professional and academic background:</p>
+            <div class="mb-3">
                 <strong>Education:</strong>
-                <ul>
+                <ul class="list-unstyled">
                     <li>LEAN SIX SIGMA FOR ENGINEERS, Universidad de Alicante. 2022</li>
                     <li>CHEMICAL ENGINEERING, Universidad de Alicante. LAST YEAR</li>
                 </ul>
                 <strong>Languages:</strong>
-                <ul>
+                <ul class="list-unstyled">
                     <li>Arabic: Spoken at home and on numerous trips to Morocco.</li>
                     <li>Spanish: Native language.</li>
                     <li>English: Medium level, studied at college and high school, in continuous improvement.</li>
@@ -104,32 +63,15 @@
                     <li>Valencian: Medium level.</li>
                 </ul>
                 <strong>Work Experience:</strong>
-                <ul>
-                    <li>CHM Internship as analysis laboratory technician (2020-2020): My main tasks were taking samples, analysis of the samples, and representation of the results.</li>
-                    <li>CETRA Waste treatment center (2022-2022): Control of the digester and understanding the operation of a recycling plant.</li>
-                    <li>Amazon, Germany: 4 months</li>
-                    <li>Bax Music, Netherlands: 2 months</li>
-                    <li>Lifeguard at the beach</li>
-                    <li>Internship as quality control engineer for concrete and bituminous pieces: 2 months</li>
-                    <li>Internship at Urbaser: In charge of the biodigester and biogas production</li>
+                <ul class="list-unstyled">
+                    <li>CHM Internship as analysis laboratory technician (2020-2020)</li>
+                    <li>CETRA Waste treatment center (2022-2022)</li>
+                    <li>Various short-term roles abroad including positions in Amazon, Germany and Bax Music, Netherlands</li>
                     <li>Family business in Boston: 3 months, buying and selling</li>
-                </ul>
-                <strong>Other Relevant Information:</strong>
-                <ul>
-                    <li>To obtain my university degree, I have three subjects and the Final Degree Project remaining. Currently, I am searching for a company where I can work not only in the present but also to establish myself and grow to reach the highest positions, fully developing as an engineer. Although I don't master the native language, I trust that my skills will overcome any language barriers. An interesting hobby I can highlight is my passion for inventions and projects. Additionally, I want to mention that I have already worked for about six months in total both in the Netherlands and Germany, and my experience has been so pleasant that I have decided to return, hoping for a much longer stay this time.</li>
-                </ul>
-                <strong>Cover Letter:</strong>
-                <p>I perceive myself as a responsible and proactive individual, always seeking opportunities for collaboration and personal growth. My strongest asset lies in generating ideas and effectively contributing to team efforts to achieve favorable outcomes. While my professional experience is currently limited to internships, I am eager to adapt and continue expanding my skills in various work environments.</p>
-                <strong>Skills:</strong>
-                <ul>
-                    <li>MATLAB</li>
-                    <li>Leadership</li>
-                    <li>Problem resolution</li>
-                    <li>Emotional intelligence</li>
                 </ul>
             </div>
         </div>
-        <div class="section video-container">
+        <div class="section">
             <h2>Video</h2>
             <p>Below, you can watch a video I have uploaded:</p>
             <iframe src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -137,11 +79,11 @@
         <div class="section contact">
             <h2>Contact</h2>
             <p>For more information, you can contact me at:</p>
-            <p>Email: <a href="mailto:ismaelbouaoudaruiz@gmail.com">ismaelbouaoudaruiz@gmail.com</a></p>
-            <p>Phone: +34 632 830 769</p>
+            <p>Email: <a href="mailto:ismaelbouaoudaruiz@gmail.com" class="btn btn-outline-success">ismaelbouaoudaruiz@gmail.com</a></p>
+            <p>Phone: <a href="tel:+34632830769" class="btn btn-outline-success">+34 632 830 769</a></p>
         </div>
     </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
-
 </html>
