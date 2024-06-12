@@ -1,15 +1,13 @@
-(function($){
-  // variables
-  elementWidth = $('ul').width(),
-  containerWidth = $('nav').width(),
-  difference = elementWidth-containerWidth,
-  finalWidth = difference * 1.5,
-  element = $('ul');
-  
-  // active on click
-  $('li').on('click', function(){
-    $('li').removeClass('active');
-    $(this).addClass('active');
-  });
-  
+(function($) {
+    $('li:not(.slide)').on('click', function() {
+        var index = $(this).index();
+        var slideWidth = $(this).width();
+        var slideLeft = slideWidth * index;
+        $('.slide').css({
+            width: slideWidth + 'px',
+            left: slideLeft + 'px'
+        });
+        $('li').removeClass('active');
+        $(this).addClass('active');
+    });
 })(jQuery);
