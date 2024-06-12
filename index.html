@@ -43,9 +43,53 @@
     </div>
 </section>
 <section id="growth">
-    <div class=" title">
+    <div class="title">
         <h2>Growth</h2>
-        <p>Here you can track the progress of my ongoing projects and milestones achieved in my career and personal development.</p>
+        <div class="stats">
+            <ul>
+                <li>Level: <span id="level">28</span></li>
+                <li>Vitality: <span id="vitality">50</span></li>
+                <li>Energy: <span id="energy">50</span></li>
+                <li>Strength: <span id="strength">10</span></li>
+                <li>Agility: <span id="agility">10</span></li>
+                <li>Intelligence: <span id="intelligence">10</span></li>
+                <li>Luck: <span id="luck">10</span></li>
+                <li>Confidence: <span id="confidence">10</span></li>
+            </ul>
+        </div>
+        <table>
+            <caption>Conditions for Stat Increase</caption>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Effect</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sport</td>
+                    <td>Vitality +0.2, Strength +0.2, Energy +0.2, Confidence +0.1</td>
+                    <td><button onclick="performActivity('sport')">Improve</button></td>
+                </tr>
+                <tr>
+                    <td>Nutrition</td>
+                    <td>Vitality +0.5, Strength +0.05, Energy +0.2, Agility +0.05, Intelligence +0.1, Luck +0.01, Confidence +0.05</td>
+                    <td><button onclick="performActivity('nutrition')">Improve</button></td>
+                </tr>
+                <tr>
+                    <td>Reading</td>
+                    <td>Energy +0.01, Intelligence +0.1, Luck +0.1</td>
+                    <td><button onclick="performActivity('reading')">Improve</button></td>
+                </tr>
+                <tr>
+                    <td>Drawing</td>
+                    <td>Intelligence +0.05, Confidence +0.05</td>
+                    <td><button onclick="performActivity('drawing')">Improve</button></td>
+                </tr>
+                <!-- Add more activities as needed -->
+            </tbody>
+        </table>
     </div>
 </section>
 <script src="./script.js"></script>
