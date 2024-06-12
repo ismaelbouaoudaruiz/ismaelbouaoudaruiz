@@ -21,6 +21,7 @@ nav {
     bottom: 0;
     height: 100px;
     overflow: hidden;
+    z-index: 1000; /* Asegúrate de que la barra de navegación esté en la parte superior */
 }
 
 nav ul {
@@ -46,7 +47,7 @@ nav li {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 800;
-    position: relative; /* Ajuste para animaciones y estilos de :hover */
+    position: relative;
 }
 
 nav li.active {
@@ -85,7 +86,7 @@ nav .slide {
 
 section {
     background-color: #1b1b1b;
-    height: 100vh;
+    min-height: 100vh; /* Asegúrate de que las secciones ocupen al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +94,7 @@ section {
     color: #efefef;
     padding: 20px;
     box-sizing: border-box;
+    z-index: 1; /* Asegúrate de que el contenido esté por debajo de la barra de navegación */
 }
 
 section .title {
@@ -149,4 +151,64 @@ section .title span:last-child {
     100% {
         transform: translateY(0);
     }
+}
+
+.stats ul {
+    background: #333;
+    color: white;
+    padding: 20px;
+    list-style-type: none;
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stats li {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats span {
+    font-weight: bold;
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+}
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #666;
+    color: white;
+}
+
+caption {
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 1em;
 }
