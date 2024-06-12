@@ -153,12 +153,16 @@ section .title span:last-child {
     }
 }
 
+.stats {
+    width: 300px;
+    margin-bottom: 20px; /* Space between stats and table */
+}
+
 .stats ul {
     background: #333;
     color: white;
     padding: 20px;
     list-style-type: none;
-    width: 300px;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 8px;
     display: flex;
@@ -182,11 +186,15 @@ section .title span:last-child {
 }
 
 table {
-    width: 80%;
+    width: 60%; /* Make the table narrower */
     margin-top: 20px;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    background-color: #222;
+    color: #fff;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* To make rounded corners work for the entire table */
 }
 
 table, th, td {
@@ -195,11 +203,11 @@ table, th, td {
 
 th, td {
     padding: 8px;
-    text-align: left;
+    text-align: center; /* Center align text */
 }
 
 th {
-    background-color: #666;
+    background-color: #444;
     color: white;
 }
 
@@ -211,4 +219,20 @@ caption {
 button {
     padding: 5px 10px;
     font-size: 1em;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Ensure there's space at the bottom of the page */
+body::after {
+    content: "";
+    display: block;
+    height: 150px; /* Adjust this height to add space at the bottom */
 }
