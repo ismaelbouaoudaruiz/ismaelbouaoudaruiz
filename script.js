@@ -11,7 +11,7 @@ const stats = {
 
 const effects = {
     sport: { vitality: 0.2, strength: 0.2, energy: 0.2, confidence: 0.1 },
-    nutrition: { level 1 , vitality: 0.5, strength: 0.05, energy: 0.2, agility: 0.05, intelligence: 0.1, luck: 0.01, confidence: 0.05 },
+    nutrition: { vitality: 0.5, strength: 0.05, energy: 0.2, agility: 0.05, intelligence: 0.1, luck: 0.01, confidence: 0.05 },
     reading: { energy: 0.01, intelligence: 0.1, luck: 0.1 },
     drawing: { intelligence: 0.05, confidence: 0.05 },
     meditation: { energy: 0.1, intelligence: 0.05, confidence: 0.2 },
