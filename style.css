@@ -159,3 +159,26 @@ body::after {
     display: block;
     height: 150px;
 }
+
+/* Transición suave para el indicador .slide */
+nav .slide {
+    transition: left 0.5s ease, width 0.5s ease; /* Hace la transición más suave */
+}
+
+/* Animación básica de fade-in para las secciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    opacity: 0; /* Inicia invisible para permitir la animación */
+    animation: fadeIn 0.5s ease forwards; /* Animación de fade-in */
+    animation-delay: 0.3s; /* Retrasa la animación hasta que se inicie la transición */
+}
+
+/* Mantiene las secciones visibles después de cargar por primera vez */
+section:target {
+    animation: none; /* Desactiva la animación cuando la sección es el objetivo directo */
+    opacity: 1; /* Asegura que la sección sea totalmente visible cuando es navegada directamente */
+}
