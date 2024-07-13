@@ -24,14 +24,7 @@ const effects = {
     yoga: { vitality: 0.2, energy: 0.1, confidence: 0.2 },
     cooking: { vitality: 0.1, intelligence: 0.1, confidence: 0.1 },
     gardening: { vitality: 0.1, intelligence: 0.1 },
-    crafting: { intelligence: 0.1, confidence: 0.1 },
-    // Add more activities with their effects here
-};
-
-const dailyDecrementEffects = {
-    sport: { vitality: -0.2, strength: -0.2, energy: -0.2, confidence: -0.1 },
-    nutrition: { vitality: -0.5, strength: -0.05, energy: -0.2, agility: -0.05, intelligence: -0.1, luck: -0.01, confidence: -0.05 },
-    reading: { energy: -0.01, intelligence: -0.1, luck: -0.1 }
+    crafting: { intelligence: 0.1, confidence: 0.1 }
 };
 
 let activityCounts = {
@@ -63,32 +56,6 @@ function performActivity(activity) {
     }
     updateStatsDisplay();
 }
-
-function decrementDailyStats() {
-    for (const activity in dailyDecrementEffects) {
-        if (activityCounts[activity] === 0) {
-            const effect = dailyDecrementEffects[activity];
-            for (const stat in effect) {
-                stats[stat] += effect[stat]; // Since effect is negative, this will decrement
-                if (stats[stat] < 0) stats[stat] = 0;
-            }
-        } else {
-            activityCounts[activity]--;
-            updateActivityCounts();
-        }
-    }
-    updateStatsDisplay();
-}
-
-function increaseLevel() {
-    stats.level++;
-    updateStatsDisplay();
-}
-
-updateStatsDisplay();
-updateActivityCounts();
-setInterval(decrementDailyStats, 86400000); // Decrease daily stats every 24 hours
-setInterval(increaseLevel, 31536000000); // Increase level every 365 days
 
 (function($) {
     $('li:not(.slide)').on('click', function() {
