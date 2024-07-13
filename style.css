@@ -1,4 +1,4 @@
-   a {
+a {
     color: inherit;
     text-decoration: inherit;
 }
@@ -21,7 +21,7 @@ nav {
     bottom: 0;
     height: 100px;
     overflow: hidden;
-    z-index: 1000; /* Asegúrate de que la barra de navegación esté en la parte superior */
+    z-index: 1000;
 }
 
 nav ul {
@@ -57,7 +57,7 @@ nav li.active {
 
 nav li.active::after {
     content: "";
-    position: absolute;
+    position:absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -86,7 +86,7 @@ nav .slide {
 
 section {
     background-color: #1b1b1b;
-    min-height: 100vh; /* Asegúrate de que las secciones ocupen al menos la altura de la ventana */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +94,7 @@ section {
     color: #efefef;
     padding: 20px;
     box-sizing: border-box;
-    z-index: 1; /* Asegúrate de que el contenido esté por debajo de la barra de navegación */
+    z-index: 1;
 }
 
 section .title {
@@ -153,86 +153,9 @@ section .title span:last-child {
     }
 }
 
-.stats {
-    width: 300px;
-    margin-bottom: 20px; /* Space between stats and table */
-}
-
-.stats ul {
-    background: #333;
-    color: white;
-    padding: 20px;
-    list-style-type: none;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.stats li {
-    width: 100%;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.stats span {
-    font-weight: bold;
-    width: 50px;
-    display: inline-block;
-    text-align: right;
-}
-
-table {
-    width: 60%; /* Make the table narrower */
-    margin-top: 20px;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #222;
-    color: #fff;
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* To make rounded corners work for the entire table */
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
-    text-align: center; /* Center align text */
-}
-
-th {
-    background-color: #444;
-    color: white;
-}
-
-caption {
-    font-size: larger;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 5px 10px;
-    font-size: 1em;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #666;
-}
-
 /* Ensure there's space at the bottom of the page */
 body::after {
     content: "";
     display: block;
-    height: 150px; /* Adjust this height to add space at the bottom */
+    height: 150px;
 }
