@@ -3,10 +3,10 @@ function showSection(sectionId) {
     sections.forEach(section => {
         if (section.id === sectionId) {
             section.style.display = 'block';
-            section.style.opacity = 1;
+            setTimeout(() => { section.style.opacity = 1; }, 0); // Slight delay to trigger CSS transition
         } else {
-            section.style.display = 'none';
             section.style.opacity = 0;
+            setTimeout(() => { section.style.display = 'none'; }, 500); // Match with CSS transition duration
         }
     });
 
