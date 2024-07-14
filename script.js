@@ -2,7 +2,7 @@ function showSection(sectionId) {
     var sections = document.querySelectorAll('.content');
     sections.forEach(section => {
         if (section.id === sectionId) {
-            section.style.display = 'block'; // Asegúrate de que la sección esté visible
+            section.style.display = 'block';
             section.style.opacity = 0;
             let opacity = 0;
             const fadeIn = setInterval(() => {
@@ -22,13 +22,12 @@ function showSection(sectionId) {
                     section.style.opacity = opacity;
                 } else {
                     clearInterval(fadeOut);
-                    section.style.display = 'none'; // Ocultar las secciones no activas
+                    section.style.display = 'none';
                 }
             }, 30);
         }
     });
 
-    // Actualizar la clase activa en los enlaces de la navegación
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         const sectionName = link.getAttribute('onclick') ? link.getAttribute('onclick').match(/'([^']+)'/)[1] : null;
