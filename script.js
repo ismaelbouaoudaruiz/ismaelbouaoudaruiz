@@ -38,3 +38,8 @@ function showSection(sectionId) {
         }
     });
 }
+
+// Cargar la sección inicial al cargar la página
+document.addEventListener("DOMContentLoaded", function() {
+    showSection('home');
+});
