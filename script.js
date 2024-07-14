@@ -1,27 +1,50 @@
-function showSection(sectionId) {
-    var sections = document.querySelectorAll('.content');
-    sections.forEach(section => {
-        if (section.id === sectionId) {
-            section.style.display = 'block';
-            setTimeout(() => { section.style.opacity = 1; }, 0); // Slight delay to trigger CSS transition
-        } else {
-            section.style.opacity = 0;
-            setTimeout(() => { section.style.display = 'none'; }, 500); // Match with CSS transition duration
-        }
-    });
+(function($) {
+    $(document).ready(function() {
+        var navItems = $('nav ul li:not(.slide)');
+        var slide = $('.slide');
 
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        const sectionName = link.getAttribute('onclick') ? link.getAttribute('onclick').match(/'([^']+)'/)[1] : null;
-        if (sectionName === sectionId) {
-            link.parentElement.classList.add('active');
-        } else {
-            link.parentElement.classList.remove('active');
-        }
-    });
-}
+        navItems.on('click', function(e) {
+            var link = $(this).find('a');
 
-// Cargar la sección inicial al cargar la página
-document.addEventListener("DOMContentLoaded", function() {
-    showSection('home');
-});
+            // No prevenir el comportamiento por defecto para enlaces de descarga
+            if (!link.hasClass('download')) {
+                e.preventDefault();
+                var targetId = link.attr('href');
+                var target = $(targetId);
+
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+
+                    navItems.removeClass('active');
+                    $(this).addClass('active');
+                    
+                    var index = $(this).index();
+                    var slideWidth = $(this).outerWidth();
+                    var slideLeft = slideWidth * index;
+
+                    slide.css({
+                        width: slideWidth + 'px',
+                        left: slideLeft + 'px'
+                    });
+                }
+            }
+        });
+
+        $(window).on('load', function() {
+            var hash = window.location.hash;
+            if (hash) {
+                var target = $(hash);
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+
+                    navItems.removeClass('active');
+                    $('nav ul li a[href="' + hash + '"]').parent().addClass('active');
+                }
+            }
+        });
+    });
+})(jQuery);
