@@ -1,12 +1,16 @@
-a {
-    color: inherit;
-    text-decoration: inherit;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 ::selection {
@@ -81,7 +85,7 @@ nav .slide {
     z-index: -1;
     height: 2px;
     width: 0;
-    transition: left 0.3s ease, width 0.3s ease;
+    transition: left 0.5s ease, width 0.5s ease;
 }
 
 section {
@@ -95,6 +99,9 @@ section {
     padding: 20px;
     box-sizing: border-box;
     z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.3s;
 }
 
 section .title {
@@ -153,32 +160,24 @@ section .title span:last-child {
     }
 }
 
-/* Ensure there's space at the bottom of the page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body::after {
     content: "";
     display: block;
     height: 150px;
 }
 
-/* Transición suave para el indicador .slide */
-nav .slide {
-    transition: left 0.5s ease, width 0.5s ease; /* Hace la transición más suave */
-}
-
-/* Animación básica de fade-in para las secciones */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-section {
-    opacity: 0; /* Inicia invisible para permitir la animación */
-    animation: fadeIn 0.5s ease forwards; /* Animación de fade-in */
-    animation-delay: 0.3s; /* Retrasa la animación hasta que se inicie la transición */
-}
-
-/* Mantiene las secciones visibles después de cargar por primera vez */
 section:target {
-    animation: none; /* Desactiva la animación cuando la sección es el objetivo directo */
-    opacity: 1; /* Asegura que la sección sea totalmente visible cuando es navegada directamente */
+    animation: none;
+    opacity: 1;
 }
