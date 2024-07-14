@@ -2,9 +2,11 @@ function showSection(sectionId) {
     var sections = document.querySelectorAll('.content');
     sections.forEach(section => {
         if (section.id === sectionId) {
-            section.classList.add('active');
+            section.style.display = 'block';
+            section.style.opacity = 1;
         } else {
-            section.classList.remove('active');
+            section.style.display = 'none';
+            section.style.opacity = 0;
         }
     });
 
