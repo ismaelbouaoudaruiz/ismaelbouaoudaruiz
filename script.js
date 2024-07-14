@@ -1,6 +1,5 @@
 function showSection(sectionId) {
     var sections = document.querySelectorAll('.content');
-    // Animación suave y manejo del display
     sections.forEach(section => {
         if (section.id === sectionId) {
             section.style.display = 'block'; // Asegúrate de que la sección esté visible
