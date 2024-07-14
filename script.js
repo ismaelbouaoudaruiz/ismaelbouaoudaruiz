@@ -4,27 +4,32 @@
         var slide = $('.slide');
 
         navItems.on('click', function(e) {
-            e.preventDefault();
-            var targetId = $(this).find('a').attr('href');
-            var target = $(targetId);
+            var link = $(this).find('a');
 
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 500);
+            // No prevenir el comportamiento por defecto para enlaces de descarga
+            if (!link.hasClass('download')) {
+                e.preventDefault();
+                var targetId = link.attr('href');
+                var target = $(targetId);
 
-                navItems.removeClass('active');
-                $(this).addClass('active');
-                
-                var index = $(this).index();
-                var slideWidth = $(this).outerWidth();
-                var slideLeft = slideWidth * index;
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
 
-                slide.css({
-                    width: slideWidth + 'px',
-                    left: slideLeft + 'px'
-                });
-            } 
+                    navItems.removeClass('active');
+                    $(this).addClass('active');
+                    
+                    var index = $(this).index();
+                    var slideWidth = $(this).outerWidth();
+                    var slideLeft = slideWidth * index;
+
+                    slide.css({
+                        width: slideWidth + 'px',
+                        left: slideLeft + 'px'
+                    });
+                }
+            }
         });
 
         $(window).on('load', function() {
