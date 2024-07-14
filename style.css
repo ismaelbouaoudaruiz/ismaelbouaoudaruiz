@@ -1,4 +1,4 @@
-html {
+ html {
     scroll-behavior: smooth;
 }
 
@@ -6,13 +6,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #1b1b1b;
-    color: #efefef;
 }
 
 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: inherit;
 }
 
 ::selection {
@@ -22,113 +20,164 @@ a {
 
 nav {
     width: 100%;
-    background-color: #333;
+    background-color: #0b0b0b;
     position: fixed;
     bottom: 0;
-    height: 60px;
+    height: 100px;
+    overflow: hidden;
     z-index: 1000;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
-    align-items: center;
 }
 
 nav li {
-    color: #bbb;
-    transition: color 0.3s;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #555;
+    transition: background-color 0.5s ease, color 0.3s ease;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-weight: 800;
+    position: relative;
 }
 
 nav li.active {
-    color: #fff;
+    background-color: #151515;
+    color: #efefef;
+}
+
+nav li.active::after {
+    content: "";
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7ca18;
 }
 
 nav li:hover {
-    color: #fff;
+    color: #ececec;
 }
 
-#main-content {
-    padding-bottom: 60px;
+nav li:active {
+    background-color: #222;
 }
 
-.hero {
+nav .slide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    height: 2px;
+    width: 0;
+    transition: left 0.5s ease, width 0.5s ease;
+}
+
+section {
+    background-color: #1b1b1b;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #1b1b1b;
     color: #efefef;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.3s;
+}
+
+section .title {
+    max-width: 60%;
+    width: 100%;
+    align-self: center;
+    transform: translateY(-50px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 10px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
-    letter-spacing: 0.1rem;
-}
-
-section {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-section.active {
-    display: block;
-    opacity: 1;
-}
-
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container h2 {
+section .title h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #f7ca18;
-    text-align: center;
 }
 
-.container p, .container ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
+section .title p, section .title ul {
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-.container ul {
+section .title ul {
     list-style-type: none;
     padding: 0;
 }
 
-.container ul li {
+section .title ul li {
     margin-bottom: 10px;
+}
+
+section .title span {
+    display: inline-block;
+    font-size: 7vw;
+    color: #efefef;
+    width: 100%;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    animation: byBottom 1s ease both;
+    font-weight: 600;
+    letter-spacing: 0.25vw;
+}
+
+section .title span:last-child {
+    font-size: 1rem;
+    animation: byBottom 1s 0.25s ease both;
+}
+
+@keyframes byBottom {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body::after {
     content: "";
     display: block;
-    height: 60px;
+    height: 150px;
+}
+
+section:target {
+    animation: none;
+    opacity: 1;
 }
