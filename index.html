@@ -5,52 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ismael Bouaouda Ruiz</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <nav>
     <ul>
-        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="CVIsmaelBouaoudaRuiz.pdf" download class="download">Curriculum</a></li>
-        <li><a href="#about-me" onclick="showSection('about-me')">About Me</a></li>
-        <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
-        <li><a href="#videos" onclick="showSection('videos')">Videos</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li class="slide"></li>
     </ul>
 </nav>
-<div id="main-content">
-    <div id="home" class="content active">
-        <div class="hero">
-            <h1>Ismael Bouaouda Ruiz</h1>
-            <p>Chemical Engineer</p>
-        </div>
+<section id="home">
+    <div class="title"><span>Ismael Bouaouda Ruiz</span><span>Chemical Engineer</span></div>
+</section>
+<section id="about">
+    <div class="title">
+        <h2>About Me</h2>
+        <p>I am Ismael Bouaouda Ruiz, a chemical engineering student on the verge of completing my academic training at the University of Alicante. Although I haven't always excelled academically, my true strength lies in my ability to maximise the potential of seemingly small ideas. I possess an innate capability to generate innovative solutions and find multiple answers to a single problem. This, I believe, is what distinguishes and defines me as both a professional and a person.</p>
+        
+        <p>My life has not been an easy journey. I have faced numerous personal challenges, such as loneliness, financial difficulties, and the loss of loved ones, which have tested my resilience and emotional strength. However, I have managed to remain steadfast and am gradually overcoming these adversities. These experiences have enriched my personal and professional perspective, teaching me the value of perseverance and adaptability.</p>
+        
+        <p>In addition to my chemical engineering career, I am involved in several personal projects that reflect my passion for innovation and entrepreneurship. I am developing an artificial intelligence application, designing an interface that promotes sports and physical well-being, and another mobile app intended to assist farmers in their daily tasks. Each of these projects represents an aspect of my desire to creatively and effectively apply technology to solve real-world problems.</p>
+        
+        <p>My intellectual curiosity has also led me to explore fields outside my study area, enjoying activities that challenge the intellect. Moreover, I have recently developed a fondness for reading, having devoured around 30 books this year, which has further broadened my horizon and deepened my understanding of various subjects.</p>
+        
+        <p>My latest project is perhaps the most personal: I am creating a website where I will upload "mini-projects" that may seem trivial or childish at first glance, but under an engineering approach, reveal their potential to be transformative ideas. This platform is not just a space for creativity but also a means to empower others to share their ideas without fear of judgement, thereby promoting a culture of innovation and openness.</p>
+        
+        <p>In summary, although my path has been fraught with obstacles, each experience has contributed to my growth. I am seeking an opportunity where I can not only apply my skills and knowledge but also expand them and ascend to leadership roles, overcoming any barriers with determination and creativity. I am ready to face the challenges of the future and make a significant contribution in any environment I encounter.</p>
     </div>
-    <div id="about-me" class="content">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am Ismael Bouaouda Ruiz, a chemical engineering student on the verge of completing my academic training at the University of Alicante. Although I haven't always excelled academically, my true strength lies in my ability to maximise the potential of seemingly small ideas. I possess an innate capability to generate innovative solutions and find multiple answers to a single problem. This, I believe, is what distinguishes and defines me as both a professional and a person.</p>
-            <p>My life has not been an easy journey. I have faced numerous personal challenges, such as loneliness, financial difficulties, and the loss of loved ones, which have tested my resilience and emotional strength. However, I have managed to remain steadfast and am gradually overcoming these adversities. These experiences have enriched my personal and professional perspective, teaching me the value of perseverance and adaptability.</p>
-            <p>In addition to my chemical engineering career, I am involved in several personal projects that reflect my passion for innovation and entrepreneurship. I am developing an artificial intelligence application, designing an interface that promotes sports and physical well-being, and another mobile app intended to assist farmers in their daily tasks. Each of these projects represents an aspect of my desire to creatively and effectively apply technology to solve real-world problems.</p>
-            <p>My intellectual curiosity has also led me to explore fields outside my study area, enjoying activities that challenge the intellect. Moreover, I have recently developed a fondness for reading, having devoured around 30 books this year, which has further broadened my horizon and deepened my understanding of various subjects.</p>
-            <p>My latest project is perhaps the most personal: I am creating a website where I will upload "mini-projects" that may seem trivial or childish at first glance, but under an engineering approach, reveal their potential to be transformative ideas. This platform is not just a space for creativity but also a means to empower others to share their ideas without fear of judgement, thereby promoting a culture of innovation and openness.</p>
-            <p>In summary, although my path has been fraught with obstacles, each experience has contributed to my growth. I am seeking an opportunity where I can not only apply my skills and knowledge but also expand them and ascend to leadership roles, overcoming any barriers with determination and creativity. I am ready to face the challenges of the future and make a significant contribution in any environment I encounter.</p>
-        </div>
+</section>
+<section id="projects">
+    <div class="title">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Recycling Initiative:</strong> A project focused on developing innovative recycling processes to reduce waste and promote sustainable practices.</li>
+            <li><strong>Fruit and Vegetable Web App:</strong> A web application designed to help consumers track and manage their fruit and vegetable intake, encouraging healthier eating habits.</li>
+        </ul>
     </div>
-    <div id="projects" class="content">
-        <div class="container">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Recycling Initiative:</strong> A project focused on developing innovative recycling processes to reduce waste and promote sustainable practices.</li>
-                <li><strong>Fruit and Vegetable Web App:</strong> A web application designed to help consumers track and manage their fruit and vegetable intake, encouraging healthier eating habits.</li>
-            </ul>
-        </div>
+</section>
+<section id="videos">
+    <div class="title">
+        <h2>Videos</h2>
+        <p>I have started sharing my experiences and projects on YouTube. Check out my latest video <a href="https://www.youtube.com/watch?v=yourVideoId" target="_blank" rel="noopener noreferrer">here</a>.</p>
     </div>
-    <div id="videos" class="content">
-        <div class="container">
-            <h2>Videos</h2>
-            <p>I have started sharing my experiences and projects on YouTube. Check out my latest video <a href="https://www.youtube.com/watch?v=yourVideoId" target="_blank" rel="noopener noreferrer">here</a>.</p>
-        </div>
-    </div>
-</div>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
- 
