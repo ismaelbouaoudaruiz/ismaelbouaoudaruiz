@@ -183,3 +183,53 @@ section:target {
     animation: none;
     opacity: 1;
 }
+
+.file-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.file-table-header, .file-table-row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-table-header {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.file-table-row:hover {
+    background-color: #f1f1f1;
+}
+
+.file-type, .file-name, .file-date {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.file-type {
+    width: 50px;
+    text-align: center;
+}
+
+.file-name a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.file-name a:hover {
+    color: #f7ca18;
+}
+
+.file-icon {
+    width: 24px;
+    height: 24px;
+}
